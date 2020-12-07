@@ -1,10 +1,10 @@
 foreground = [
-	['../dist/img/img4.jpg', '武汉加油！中国加油'],
-	['../dist/img/img5.jpeg', '向白衣天使致敬！'],
-	['../dist/img/img3.jpg', '中国必胜'],
-	['../dist/img/img6.jpeg', '战胜疫情'],
-	['../dist/img/img8.jpeg', '病毒走开'],
-	['../dist/img/img7.jpeg', '终将胜利'],
+	['./img/img4.jpg', '武汉加油！中国加油'],
+	['./img/img5.jpeg', '向白衣天使致敬！'],
+	['./img/img3.jpg', '中国必胜'],
+	['./img/img6.jpeg', '战胜疫情'],
+	['./img/img8.jpeg', '病毒走开'],
+	['./img/img7.jpeg', '终将胜利'],
 ]
 
 
