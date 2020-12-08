@@ -13,3 +13,6 @@
 
 后端：SSD算法目标检测，TensorFlow模型训练,模型转换工具MMdnn
 
+连接：TensorFlow.js使项目可以在本地浏览器运行
+
+部署：研究中……
