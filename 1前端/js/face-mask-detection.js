@@ -89,6 +89,7 @@ function faceVideoAnalysis(video) {
     if (!video.paused) {
         faceAnalysis(video);
         intervalID = setTimeout(() => {
+            //循环执行处理
             faceVideoAnalysis(video);
         });
         // intervalID = setInterval(() => {
