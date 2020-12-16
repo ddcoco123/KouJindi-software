@@ -25,8 +25,12 @@
 
         <link href="img/m.ico" rel="icon" type="image/x-icon" />
 		<title>口罩佩戴检测</title>
+		
 	</head>
-
+<body background="img/background8.jpg" 
+	  style="background-repeat: no-repeat; 
+	         background-size: 100% 100%; 
+			 background-attachment: fixed;">
 	<div class="top">
 		<div class="menu">
 
@@ -44,34 +48,35 @@
 		</div>
 	</div>
 
-	<main role="main" class="container">
-		<div class="starter-template">
-			<h1 id="h_title">口罩佩戴检测</h1>
-			<p class="lead" id="description">运行在您浏览器里面的口罩佩戴检测</p>
-			<p class="lead" id="description"><small>本模型极小，只有一百万参数，若检测有误，还请谅解</small></p>
+	<main role="main" class="container" style="background-color: rgba(255,255,255,0.6); ">
+		<div class="starter-template" >
+			<br />
+			<h1 id="h_title"><font color="#000000">口  罩  佩  戴  检  测</font></h1><br />
+			<p class="lead" id="description"><font color="#000000">运行在您浏览器里面的口罩佩戴检测</font></p>
+			<p class="lead" id="description"><small><font color="#000000">本模型极小，只有一百万参数，若检测有误，还请谅解</font></small></p>
 		</div>
 
-		<div class="container bg-light  text-center" id="ai_container" style=" border-radius:30px; margin:0 auto; padding-bottom: 20px;">
+		<div class="container bg-light  text-center" id="ai_container" style=" border-radius:20px; margin:0 auto; padding-bottom: 20px;">
 
 			<div class="row" style=" margin:0 auto; padding-top: 20px;">
-				<div class="col-9 col-sm-9 col-md-9 col-lg-9 bg-light" id="canvas_container">
+				<div class="col-9 col-sm-9 col-md-9 col-lg-9 " id="canvas_container">
 					<!-- 画面显示canvas -->
 					<canvas id="canvas_show" style="
-                      background-color:rgb(141, 103, 103); margin:0 auto;
-                      margin-left: -20px;  margin-bottom: -7px; border-radius: 10px">
+                      background-color:rgb(255, 255, 255); margin:0 auto;
+                      margin-left: -35px;  margin-bottom: -7px; border-radius: 10px">
 					</canvas>
 				</div>
 
-				<div class="col-3 col-sm-3 col-md-3 col-lg-3 bg-dark" id="img_region" style=" border-radius: 10px;">
+				<div class="col-3 col-sm-3 col-md-3 col-lg-3" id="img_region" style=" background-color:rgb(255, 255, 255); border-radius: 10px;">
 					<div class="row text-center" style="margin-top:25%;
 						 height:12%; display:flex; align-items: center; 
 						 justify-content: center ">
 						<div style="text-align:center; margin:0 auto; width:90%">
-							<button class="btn btn-default  btn-block btn-font text-center" id="openCameraBt">
+							<button class="btn btn-default  btn-block btn-font text-center"style="margin: 0 auto; border:none; background-color: inherit" id="openCameraBt">
 								<i class="fas fa-camera fa-2x" style="display: block; 
 									color:dodgerblue;">
 								</i>
-								<span class="text-white">打开摄像头</span>
+								<span class="text-white"><font color="#000000">打开摄像头</font></span>
 							</button>
 						</div>
 					</div>
@@ -79,10 +84,10 @@
 					<div class="row text-center" style="margin-top:15%; height:12%;
 						 display:flex; align-items: center; justify-content: center ">
 						<div style="text-align:center; margin:0 auto; width:90%">
-							<button class="btn btn-default btn-block btn-font" style="margin: 0 auto; background-color: inherit" id="switchCameraBt">
+							<button class="btn btn-default btn-block btn-font" style="margin: 0 auto; border:none; background-color: inherit" id="switchCameraBt">
 								<i class="fas fa-sync-alt fa-2x" style="display: block;
 									 color:dodgerblue;"></i>
-								<span class="text-white">切换前后摄像头</span>
+								<span class="text-white"><font color="#000000">切换前后摄像头</font></span>
 							</button>
 						</div>
 					</div>
@@ -90,18 +95,18 @@
 					<div class="row text-center" style="margin-top:15%; height:12%; 
 						display:flex; align-items: center; justify-content: center ">
 						<div style="text-align:center; margin:0 auto; width:90%">
-							<button class="btn btn-default btn-block btn-font" style="margin: 0 auto; background-color: inherit" id="closeCameraBt">
+							<button class="btn btn-default btn-block btn-font" style="margin: 0 auto; border:none; background-color: inherit" id="closeCameraBt">
 								<i class="fas fa-times-circle fa-2x" style="display: block; color:dodgerblue;"></i>
-								<span class="text-white">关闭摄像头</span>
+								<span class="text-white"><font color="#000000">关闭摄像头</font></span>
 							</button>
 						</div>
 					</div>
 
 					<div class="row text-center" style="margin-top:15%; height:12%; display:flex; align-items: center; justify-content: center ">
 						<div style="text-align:center; margin:0 auto; width:90%">
-							<button class="btn btn-default btn-block btn-font" style="margin: 0 auto; background-color: inherit" id="saveImgBt">
+							<button class="btn btn-default btn-block btn-font" style="margin: 0 auto; border:none; background-color: inherit" id="saveImgBt">
 								<i class="fas fa-file-download fa-2x" style="display: block; color:dodgerblue;"></i>
-								<span class="text-white">保存图片</span>
+								<span class="text-white"><font color="#000000">保存图片</font></span>
 							</button>
 						</div>
 					</div>
@@ -110,17 +115,17 @@
 						<div style="text-align:center; margin:0 auto; width:90%">
 							<div class="spinner-border spinner-border-sm text-primary">
 							</div>
-							<p class="text-white ctl-font">正在加载模型</p>
+							<p class="text-white ctl-font"><font color="#000000">正在加载模型</p>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<div class="row" id="foreground_images" style="width:100%; margin:0 auto; 
-				margin-top:10px; padding-top: 10px; background-color:#33CC99; border-radius:15px">
-				<div class="col-12">
-					<h4>请选择图片</h4>
-				</div>
+				margin-top:10px; padding-top: 10px;  border-radius:15px">
+				 <!--  -->
+				
+		
 
 			</div>
 		</div>
