@@ -1,23 +1,24 @@
-foreground = [['./img/top.jpg']
-	/*['./img/img4.jpg', '武汉加油！中国加油'],
+foreground = [
+	['./img/img4.jpg', '武汉加油！中国加油'],
 	['./img/img5.jpeg', '向白衣天使致敬！'],
 	['./img/img3.jpg', '中国必胜'],
 	['./img/img6.jpeg', '战胜疫情'],
 	['./img/img8.jpeg', '病毒走开'],
-	['./img/img7.jpeg', '终将胜利'],*/
+	['./img/img7.jpeg', '终将胜利'],
 ]
 
 
 function insertForeground() {
-	/*foreground.map(config => {
-		item =//col-4 col-sm-4 col-md-4 col-xl-2
-			`<div class="col-12 col-sm-12">
-                    <figure>
-                        <img src="${config[0]}" class="img-responsive img-content" style=""/>
-                    </figure>
-                </div>`
-		$('#foreground_images').append(item);
-	})*/
+	// foreground.map(config => {
+	// 	item =
+	// 		`<div class="col-4 col-sm-4 col-md-4 col-xl-2">
+	// 		        <figure>
+	// 		            <img src="${config[0]}" class="img-responsive img-content" style=""/>
+	// 		            <figcaption>${config[1]}</figcaption>
+	// 		        </figure>
+	// 		    </div>`
+	// 	$('#foreground_images').append(item);
+	// })
 	item =
 		`<div class="col-12 col-sm-6">
                 <div class="input-group mb-3">

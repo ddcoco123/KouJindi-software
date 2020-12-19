@@ -16,10 +16,10 @@ let canvasTemp = document.createElement("canvas");
 id2class = {0:"有口罩", 1:"无口罩"};
 
 const modelUrl = 'https://file.aizoo.com/model/cv/mask-detection/float/model.json'
-contentImgDefault = document.getElementsByClassName("img-content")[5];
+//contentImgDefault = document.getElementsByClassName("img-content")[5];
 
 contentImg = new Image();
-contentImg.src = contentImgDefault.src;
+//contentImg.src = contentImgDefault.src;
 
 
 async function loadModels() {
