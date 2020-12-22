@@ -15,7 +15,7 @@
 
 技术点：
 
-前端：JavaScript，js,CSS,HTML
+前端：JavaScript,CSS,HTML
 
 后端：SSD算法目标检测，TensorFlow模型训练,模型转换工具MMdnn
 
