@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+		<link rel="stylesheet" href="./css/face.css">
+		<link rel="stylesheet" href="./css/fontawesome.css">
+		<link rel="stylesheet" href="./css/bootstrap-toggle.min.css">
+		<!-- <link rel="stylesheet" href="css/iconicss.min.css" > -->
+		<link rel="stylesheet" href="./css/solid.css">
+		<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+		<script src="./js/aizoo.min.js"></script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?3ee112c2a01837e98cbfa698c315d857";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+
+        <link href="img/m.ico" rel="icon" type="image/x-icon" />
+		<title>口罩佩戴检测</title>
+		
+	</head>
+<body background="img/background8.jpg" 
+	  style="background-repeat: no-repeat; 
+	         background-size: 100% 100%; 
+			 background-attachment: fixed;">
+	<div class="top">
+		<div class="menu">
+
+			<ul class="nav">
+				<li>
+					<a href="index.html" title="首页">首页</a>
+				</li>
+				<li>
+					<a href="https://voice.baidu.com/act/newpneumonia/newpneumonia" target="_blank">疫情地图</a>
+				</li>
+				<li>
+					<a href="mask.html" target="_blank">口罩佩戴指南</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<main role="main" class="container" style="background-color: rgba(255,255,255,0.6); ">
+		<div class="starter-template" >
+			<br />
+			<h1 id="h_title"><font color="#000000">口  罩  佩  戴  检  测</font></h1><br />
+			<p class="lead" id="description"><font color="#000000">运行在您浏览器里面的口罩佩戴检测</font></p>
+			<p class="lead" id="description"><small><font color="#000000">本模型极小，只有一百万参数，若检测有误，还请谅解</font></small></p>
+		</div>
+
+		<div class="container bg-light  text-center" id="ai_container" style=" border-radius:20px; margin:0 auto; padding-bottom: 20px;">
+
+			<div class="row" style=" margin:0 auto; padding-top: 20px;">
+				<div class="col-9 col-sm-9 col-md-9 col-lg-9 " id="canvas_container">
+					<!-- 画面显示canvas -->
+					<canvas id="canvas_show" style="
+                      background-color:rgb(255, 255, 255); margin:0 auto;
+                      margin-left: -35px;  margin-bottom: -7px; border-radius: 10px">
+					</canvas>
+				</div>
+
+				<div class="col-3 col-sm-3 col-md-3 col-lg-3" id="img_region" style=" background-color:rgb(255, 255, 255); border-radius: 10px;">
+					<div class="row text-center" style="margin-top:25%;
+						 height:12%; display:flex; align-items: center; 
+						 justify-content: center ">
+						<div style="text-align:center; margin:0 auto; width:90%">
+							<button class="btn btn-default  btn-block btn-font text-center"style="margin: 0 auto; border:none; background-color: inherit" id="openCameraBt">
+								<i class="fas fa-camera fa-2x" style="display: block; 
+									color:dodgerblue;">
+								</i>
+								<span class="text-white"><font color="#000000">打开摄像头</font></span>
+							</button>
+						</div>
+					</div>
+
+					<div class="row text-center" style="margin-top:15%; height:12%;
+						 display:flex; align-items: center; justify-content: center ">
+						<div style="text-align:center; margin:0 auto; width:90%">
+							<button class="btn btn-default btn-block btn-font" style="margin: 0 auto; border:none; background-color: inherit" id="switchCameraBt">
+								<i class="fas fa-sync-alt fa-2x" style="display: block;
+									 color:dodgerblue;"></i>
+								<span class="text-white"><font color="#000000">切换前后摄像头</font></span>
+							</button>
+						</div>
+					</div>
+
+					<div class="row text-center" style="margin-top:15%; height:12%; 
+						display:flex; align-items: center; justify-content: center ">
+						<div style="text-align:center; margin:0 auto; width:90%">
+							<button class="btn btn-default btn-block btn-font" style="margin: 0 auto; border:none; background-color: inherit" id="closeCameraBt">
+								<i class="fas fa-times-circle fa-2x" style="display: block; color:dodgerblue;"></i>
+								<span class="text-white"><font color="#000000">关闭摄像头</font></span>
+							</button>
+						</div>
+					</div> 
+
+					<div class="row text-center" style="margin-top:15%; height:12%; display:flex; align-items: center; justify-content: center ">
+						<div style="text-align:center; margin:0 auto; width:90%">
+							<button class="btn btn-default btn-block btn-font" style="margin: 0 auto; border:none; background-color: inherit" id="saveImgBt">
+								<i class="fas fa-file-download fa-2x" style="display: block; color:dodgerblue;"></i>
+								<span class="text-dark">保存图片</font></span>
+							</button>
+						</div>
+					</div>
+
+					<div class="row text-center" id="loadModelIndictor" style="margin-top:20%; height:12%; display:flex; align-items: center; justify-content: center ">
+						<div style="text-align:center; margin:0 auto; width:90%">
+							<div class="spinner-border spinner-border-sm text-primary">
+							</div>
+							<p class="text-dark ctl-font">正在加载模型</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row" id="foreground_images" style="width:100%; margin:0 auto; 
+				margin-top:10px; padding-top: 10px;  border-radius:15px">
+				 <!--  -->
+				
+		
+
+			</div>
+		</div>
+		
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="./js/jquery-3.3.1.slim.min.js"></script>
+	<script src="./js/popper-1.14.7.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<!--<script src="../dist/js/header_footer_builder.js"></script>-->
+	<!-- <script src="../dist/js/face-api.min.js"></script> -->
+	<script src="./js/aizoo.min.js"></script>
+	<!-- <script src="../dist/js/aizoo.min.js"></script> -->
+	<script src="./js/load-image.all.min.js"></script>
+
+	<script src="./js/basicFunction.js"></script>
+	<script src="./js/containerAdjust.js"></script>
+	<script src="./js/index.js"></script>
+	<script src="./js/config.js"></script>
+	<script src="./js/face-mask-detection.js"></script>
+	<script src="./js/operate.js"></script>
+
+	<div id="footer">CopyRight@Team062020 </div>
+	</body>
+</html>
