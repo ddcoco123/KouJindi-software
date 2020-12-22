@@ -5,7 +5,9 @@
 发布形式：网址http://120.27.62.208/webMask/
 
 已部署到阿里云服务器（预计2020年1月5号之后就过期）
+
 由于期末要复习，小姐姐们就精力有限，界面摄像头功能不可用（原因是调用本地摄像头需要使用https协议，但是我们发布版是http协议）但是保留了这个按钮，如果要释放按钮，在index.html文件中将disabled：true改为false，将http协议改为http协议解决方法可参考博客：[原因](https://blog.csdn.net/yihanzhi/article/details/106051843)+[解决方法](https://www.cnblogs.com/Renyi-Fan/p/9641942.html)
+
 主功能点：图片上传检测是否佩戴口罩，支持本地获取图片和从网络获取图片（通过URL上传）
 附加功能：疫情数据，口罩佩戴的正确方法
 
