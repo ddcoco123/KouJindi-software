@@ -1,6 +1,8 @@
 # KouJindi-software
  2020秋软件工程第6组口罩佩戴识别检测项目
  [参考开源项目](https://github.com/AIZOOTech/FaceMaskDetection)（非常感谢此开源项目的开发者--大佬！！！）
+ 
+项目源码在mask_detection中
 
 发布形式：网址http://120.27.62.208/webMask/
 
