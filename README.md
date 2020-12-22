@@ -12,6 +12,7 @@
 附加功能：疫情数据，口罩佩戴的正确方法
 
 技术点：
+
 前端：JavaScript，js,CSS,HTML
 
 后端：SSD算法目标检测，TensorFlow模型训练,模型转换工具MMdnn
